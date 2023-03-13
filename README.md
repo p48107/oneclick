@@ -3,21 +3,20 @@
 �
 
 
-1.- REQUERIMIENTOS 
+### 1.- REQUERIMIENTOS 
 
-  -INSTALAR "python" 
+  - INSTALAR "python" 
 
-2.- CONFIGURACION PARA COMPILAR EL PROYECTO
+### 2.- CONFIGURACION PARA COMPILAR EL PROYECTO
 
-  -INSTALAR "virtualenv"
+  - INSTALAR "virtualenv"
+  - INSTALAR "django" --> para la plantilla django
   
-  -INSTALAR "django" --> para la plantilla django
-  
-3.- CONFIGURAR BASE DE DATOS YA SE SABE POR DEFINICION
+### 3.- CONFIGURAR BASE DE DATOS YA SE SABE POR DEFINICION
 
-  -INSTALAR pscopg2 -->para las migraciones a POSTGRESQL
+  - INSTALAR pscopg2 -->para las migraciones a POSTGRESQL
   
-  -HACER migrate desde manage.py
+  - HACER migrate desde manage.py
 
 
 
