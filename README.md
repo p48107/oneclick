@@ -1,6 +1,8 @@
 ��#� �o�n�e�c�l�i�c�k�
 �
 �
+
+
 1.- REQUERIMIENTOS 
   -INSTALAR "python" 
 
