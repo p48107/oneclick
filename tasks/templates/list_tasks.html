@@ -11,12 +11,36 @@
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 <body>
-    <h1>Tasks</h1>
-    <form action="/tasks/new/" method="POST">
-        {% csrf_token %}
-        <input type="text" name="title" placeholder="Write a title">
-        <textarea name="description" rows="3" placeholder="Write a description"></textarea>
-        <button>Save</button>
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h1 class="display-5 text-center fw-bold">MODE ADMIN</h1>
+                <form action="{% url 'create_task' %}" method="POST" class="card card-body bg-secondary">
+                    {% csrf_token %}
+                    <label for="title">Producto:</label>
+                    <input type="text" name="title" placeholder="Escribe el nombre del producto" class="form-control mb-2">
+
+                    <label for="description">Descripcion:</label>
+                    <textarea name="description" rows="3" placeholder="Escribe una descripcion" class="form-control mb-2"></textarea>
+                    
+                    <button class="btn btn-primary">REGISTRAR</button>
+                </form>
+                {% for task in tasks %}
+                <div class="card card-body text-black mt-2 d-flex flex-row justify-content-between">
+                    <div>
+                        <h1>{{task.title}}</h1>
+                        <p>{{task.description}}</p>
+                    </div>
+                    <form action="{% url 'delete_task' task.id %}" method='POST'>
+                        {% csrf_token %}
+                        <button class="btn btn-danger">Eliminar</button>
+                    </form>
+                </div>
+                {% empty %}
+                <h2 class="display-4 text-center">No hay productos registrados</h2>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </body>
 </html>

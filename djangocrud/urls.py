@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.shortcuts import render
+from tasks.models import Task
+
+#views user
+def home(request):
+    tasks = Task.objects.all()
+    return render(request, 'home.html', {"tasks": tasks})
 
 urlpatterns = [
+    path('', home),
     path("admin/", admin.site.urls),
     path('tasks/', include('tasks.urls'))
 ]
