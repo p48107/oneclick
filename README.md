@@ -9,11 +9,14 @@
 
 2.- CONFIGURACION PARA COMPILAR EL PROYECTO
 
-  -INSTALAR "virtualenv" \n
-  -INSTALAR "django" --> para la plantilla django \n
+  -INSTALAR "virtualenv"
+  
+  -INSTALAR "django" --> para la plantilla django
   
 3.- CONFIGURAR BASE DE DATOS YA SE SABE POR DEFINICION
-  -INSTALAR pscopg2 -->para las migraciones a POSTGRESQL \n
+
+  -INSTALAR pscopg2 -->para las migraciones a POSTGRESQL
+  
   -HACER migrate desde manage.py
 
 
