@@ -1,6 +1,4 @@
-��#� �o�n�e�c�l�i�c�k�
-�
-�
+#######ONECLICK
 
 
 ### 1.- REQUERIMIENTOS 
